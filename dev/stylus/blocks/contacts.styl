@@ -1,0 +1,158 @@
+.contacts
+  &__top
+    display flex
+    justify-content space-between
+    mb 35px
+    @media $desktopMin
+      flex-direction column
+    &-label
+      opacity .5
+      fontify 15px 300 25px
+      mb 4px
+    &-text
+      color black
+      fontify 21px 300 28px
+      @media $lDesktopSmall
+        fontify 18px 300 28px
+    &-mail
+      color black
+      fontify 21px 300 28px
+      border-bottom 1px solid
+      transition .7s border
+      @media $lDesktopSmall
+        fontify 18px 300 28px
+      &:hover
+        border-color transparent
+  &__col
+    ib()
+    w calc(50% - 31px)
+    @media $desktopMin
+      w 100%
+      & + &
+        mt 25px
+  &__map
+    pos relative
+    w 100vw
+    l 50%
+    ml -50vw
+    h 100%
+    &over
+      h 80vh
+      max-height 600px
+      mb 107px
+      @media $lDesktopSmall
+        mb 64px
+  &__managers
+    max-width 1060px
+    pb 60px
+    @media $lDesktopSmall
+      max-width 890px
+      pb 0
+    &-title
+      color black
+      fontify 36px 900 40px
+      mb 40px
+      @media $lDesktopSmall
+        mb 50px
+    &-item
+      display flex
+      @media $LandscapeMin
+        flex-direction column
+      & + &
+        mt 66px
+        @media $lDesktopSmall
+          mt 58px
+        @media $LandscapeMin
+          mt 70px
+    &-imgover
+      w 377px
+      mr 83px
+      @media $lDesktopSmall
+        w 317px
+        mr 70px
+      @media $LandscapeMax
+        w 268px
+        mr 40px
+      @media $LandscapeMin
+        w 100%
+        mr 0
+        mb 20px
+    &-img
+      w 100%
+      @media $LandscapeMin
+        max-width 100%
+        w auto
+    &-content
+      pt 25px
+      w calc(100% - 460px)
+      @media $lDesktopSmall
+        w calc(100% - 387px)
+      @media $LandscapeMax
+        w calc(100% - 308px)
+      @media $LandscapeMin
+        w 100%
+        pt 0
+    &-name
+      pos relative
+      fontify 33px 500 45px
+      pb 18px
+      mb 20px
+      @media $lDesktopSmall
+        fontify 28px 500 38px
+        pb 14px
+        mb 11px
+      @media $LandscapeMax
+        fontify 24px 500 32px
+      &:before
+        content ""
+        bgc $red
+        pos absolute
+        l -83px
+        b 0
+        w calc(100% + 83px)
+        h 6px
+        @media $lDesktopSmall
+          w calc(100% + 70px)
+          l -70px
+        @media $LandscapeMax
+          w calc(100% + 40px)
+          l -40px
+        @media $LandscapeMin
+          l -20px
+    &-place
+      fontify 21px 300 26px
+      mb 60px
+      @media $lDesktopSmall
+        fontify 18px 300 28px
+        mb 47px
+      @media $LandscapeMax
+        mb 30px
+    &-info
+      &-row
+        & + &
+          mt 33px
+          @media $lDesktopSmall
+            mt 26px
+          @media $LandscapeMax
+            mt 16px
+      &-title
+        opacity .5
+        fontify 18px 300 24px
+        mb 11px
+        @media $lDesktopSmall
+          fontify 15px 300 25px
+          mb 7px
+      &-value
+        color black
+        fontify 21px 500 30px
+        @media $lDesktopSmall
+          fontify 15px 500 25px
+      &-mail
+        color black
+        fontify 21px 500 30px
+        border-bottom 1px solid
+        transition .7s border
+        @media $lDesktopSmall
+          fontify 15px 500 25px
+        &:hover
+          border-color transparent

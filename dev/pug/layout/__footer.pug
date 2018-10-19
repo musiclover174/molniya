@@ -1,0 +1,107 @@
+footer.footer
+  section.container
+    nav.footer__nav
+      ul.footer__nav-list
+        li.footer__nav-item
+          a(href="#").footer__nav-href О компании
+        li.footer__nav-item
+          a(href="#").footer__nav-href Новости
+        li.footer__nav-item
+          a(href="#").footer__nav-href Объекты компании
+        li.footer__nav-item
+          a(href="#").footer__nav-href Продажа активов
+        li.footer__nav-item
+          a(href="#").footer__nav-href FAQ
+        li.footer__nav-item
+          a(href="#").footer__nav-href Контакты
+    main.footer__main
+      .footer__row
+        .footer__col
+          p.footer__copy-text «Молния Недвижимость» – одна из крупнейших девелоперских компаний Челябинска, занимающаяся управлением, сдачей площадей в аренду и развитием торговых комплексов «Молния», Spar, «Семейный», торгово-офисных центров «Зенит» и Spar на Сталеваров, детской галереи Outlet в торговом комплексе «Фиеста», объектами Street-Retail. 
+        .footer__col
+          .footer__row
+            .footer__col 
+              .footer__info
+                p.footer__info-title Телефон:
+                a(href="tel:+73512160522").footer__info-phone +7 (351) 216-05-22
+              .footer__info
+                p.footer__info-title Электронная почта:
+                a(href="mailto:arenda@molnia.ru").footer__info-mail arenda@molnia.ru
+            .footer__col 
+              .footer__info
+                p.footer__info-title Адрес:
+                p.footer__info-address г. Челябинск, Комсомольский проспект, дом 113
+    .footer__bottom
+      p.footer__copy © «Молния Недвижимость», 2018
+      a(href="https://www.dextra.ru/", target="_blank").footer__dextra
+        span dextra
+        | Разработка<br>сайта
+        
+.hidden-block
+  #text.popup
+    p.popup__title Заголовок текстового попапа
+    p.popup__subtitle Текст для попапа, говорящий о том, что случилось.
+  #betenant.popup
+    p.popup__title Стать арендатором
+    p.popup__subtitle Обратите внимание, что поля, отмеченные звёздочкой,  обязательны для заполнения.
+    form.popup__form
+      .popup__row
+        input(type="text", data-req="req").common__input
+        label.common__placeholder Наименование организации 
+          span *
+      .popup__row
+        input(type="text").common__input
+        label.common__placeholder Торговая марка
+      .popup__row
+        input(type="text", data-req="req").common__input
+        label.common__placeholder ФИО контактного лица 
+          span *
+      .popup__row
+        input(type="text", data-req="req").common__input.js-phone
+        label.common__placeholder Контактный телефон 
+          span *
+      .popup__row
+        input(type="text").common__input
+        label.common__placeholder Сайт
+      .popup__row
+        input(type="text", data-req="req").common__input
+        label.common__placeholder Электронная почта 
+          span *
+      .popup__row.popup__row_selects
+        .popup__sel-template
+          .popup__sel
+            select(name="")
+              option(value="-1", selected, disabled) Выберите объект
+              option(value="1") ТК «Фиеста», ул.Молодогвардейцев, д.7
+              option(value="2") SPAR, ул.Труда, д.166
+              option(value="3") SPAR, ул.Братьев Кашириных, д.133
+              option(value="4") SPAR, ул.Сталеваров, д.5
+              option(value="5") ТК «Зенит», ул.Ворошилова, д.35
+            button(type="button").popup__add-select.js-add-select
+            button(type="button").popup__remove-select.hidden.js-remove-select
+        .popup__sel
+          select(name="").js-select.js-select-first
+            option(value="-1", selected, disabled) Выберите объект
+            option(value="1") ТК «Фиеста», ул.Молодогвардейцев, д.7
+            option(value="2") SPAR, ул.Труда, д.166
+            option(value="3") SPAR, ул.Братьев Кашириных, д.133
+            option(value="4") SPAR, ул.Сталеваров, д.5
+            option(value="5") ТК «Зенит», ул.Ворошилова, д.35
+          button(type="button").popup__add-select.js-add-select
+          button(type="button").popup__remove-select.hidden.js-remove-select
+      .popup__row
+        .popup__col
+          input(type="text").common__input.js-digits
+          label.common__placeholder Желаемая площадь (кв.м.) От
+        .popup__col
+          input(type="text").common__input.js-digits
+          label.common__placeholder До
+      .popup__row
+        input(type="text").common__input
+        label.common__placeholder Сфера деятельности организации
+      .popup__row.popup__row_popcheck
+        .fakecheckbox
+          input(type="checkbox", value="", name="agreement", checked)#agreement.fakecheckbox__truecheck
+          label(for="agreement").fakecheckbox__label Даю согласие на 
+            a(href="#") обработку персональных данных
+        button(type="submit").common__sbm Отправить

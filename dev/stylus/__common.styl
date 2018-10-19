@@ -1,0 +1,503 @@
+html,
+body
+  font-family $os
+body
+  overflow-x hidden
+  &:not(.pace-done)
+    overflow hidden
+  &
+    .header,
+    .content,
+    .footer,
+    .swiper-buttons
+      opacity 0
+      transition .7s opacity
+    .content
+      z-index -5
+      pos relative
+      transition-delay 0.3s
+    .header,
+    .footer,
+    .swiper-buttons
+      transition-delay 0.8s
+  &.pace-done
+    .header,
+    .content,
+    .footer,
+    .swiper-buttons
+      opacity 1
+    .content
+      z-index auto
+    .pace
+      dn()
+      
+.container
+  w 100%
+  max-width 1600px
+  margin 0 auto
+  padding 0 80px
+  &_center
+    text-align center
+  @media $desktopMedium
+    padding 0 30px
+  @media $LandscapeMedium
+    padding 0 20px
+  &_text
+    max-width 800px
+    
+.content
+  @media $desktopMin
+    pt 96px
+  @media $PortraitMedium 
+    pt 88px
+  &_text
+    max-width 1090px
+  h1:not([class])
+    color black
+    fontify 60px 900 54px
+    margin 63px 0 35px -5px
+    max-width 1090px
+    @media $lDesktopSmall
+      fontify 48px 900 54px
+    @media $LandscapeMin
+      fontify 40px 900 44px
+  h2:not([class])
+    color black
+    fontify 36px 900 42px
+    margin 63px 0 28px -5px
+    @media $LandscapeMin
+      fontify 32px 900 36px
+  h3:not([class])
+    color black
+    fontify 30px 900 28px
+    margin 65px 0 38px -3px
+    @media $LandscapeMin
+      fontify 28px 900 34px
+  h4:not([class])
+    color black
+    fontify 24px 900 24px
+    margin 43px 0 16px -3px
+  img:not([class])
+    margin 19px 0
+    max-width 100%
+  ul:not([class])
+    list-style  none
+    margin 29px 0
+  ul:not([class]) li
+    pl 24px
+    pos relative
+    fontify 17px 400 25px
+    @media $lDesktopSmall
+      fontify 15px 400 23px
+  ul:not([class]) li + li
+    mt 14px
+  ul:not([class]) li:before
+    content ""
+    pos absolute
+    l 0
+    t 11px
+    size 10px 2px
+    bgc $red
+    @media $lDesktopSmall
+      t 10px
+  ol:not([class])
+    list-style none
+    margin 29px 0
+    counter-reset myCounter
+  ol:not([class]) li
+    pl 24px
+    pos relative
+    fontify 17px 400 25px
+    @media $lDesktopSmall
+      fontify 15px 400 23px
+  ol:not([class]) li + li
+    mt 14px
+  ol:not([class]) li:before
+    counter-increment myCounter
+    content counter(myCounter)"."	
+    pos absolute
+    l 0
+    t 0
+    w 30px
+    pr 9px
+    color $red
+    fontify 17px 400 25px
+    @media $lDesktopSmall
+      fontify 15px 400 23px
+  p:not([class])
+    color black
+    fontify 17px 400 25px
+    margin 15px 0
+    @media $lDesktopSmall
+      fontify 15px 400 23px
+  a:not([class])
+    color $red
+    border-bottom 1px solid currentColor
+    transition .5s border
+    &:hover
+      border-color transparent
+ 
+  *:not([class]):not(span):first-child
+    mt 0 !important
+  *:not([class]):not(span):last-child
+    margin-bottom 0 !important
+
+  table
+    ml -2px
+    background #f0f0f0
+  table th
+    text-align left
+    padding 16px 25px
+    color white
+    bgc #e31e25
+    fontify 17px 400 31px
+    border 2px solid #fff
+    @media $lDesktopSmall
+      fontify 15px 400 25px
+  table td
+    padding 16px 25px
+    color black
+    fontify 17px 400 31px
+    border 2px solid #fff
+    @media $lDesktopSmall
+      fontify 15px 400 25px
+
+input::-webkit-input-placeholder
+  color alpha(white, .5)
+input::-moz-placeholder
+  color alpha(white, .5)
+input:-ms-input-placeholder
+  color alpha(white, .5)
+
+body:not(.index) .content
+  pt 103px
+  @media $lDesktopSmall
+    pt 60px
+  @media $desktopMin
+    pt 146px
+  @media $PortraitMedium 
+    pt 130px
+  
+div[class\^="table-scroller"]
+  margin 37px 0
+  overflow auto
+  pos relative
+  @media $desktopMax
+    w 100%
+
+.text
+  max-width 1090px
+    
+.btn
+  ib()
+  bgc $green
+  border 0
+  border-radius 19px
+  color white
+  outline none
+  cursor pointer
+  fontify 18px 700 46px
+  padding 0 35px
+  transition .7s background
+  @media $lDesktopMedium
+    fontify 16px 700 36px
+  &:hover
+    bgc $red
+    
+.common
+  &__title 
+    color black
+    fontify 90px 700 82px
+    @media $lDesktopSmall
+      fontify 60px 700 50px
+    @media $desktopMin
+      fontify 52px 700 50px
+    @media $LandscapeMedium
+      fontify 32px 700 32px
+  &__subtitle
+    color black
+    font-family $handy
+    fontify 90px 400 71px
+    text-align right
+    mt 2px
+    @media $lDesktopSmall
+      fontify 60px 400 43px
+    @media $desktopMin
+      fontify 52px 400 40px
+    @media $LandscapeMax
+      text-align inherit
+    @media $LandscapeMedium
+      fontify 32px 400 30px
+  &__input
+    w 100%
+    h 32px
+    border 0
+    border-bottom 2px solid black
+    bgc transparent
+    color black
+    font-family $os
+    font-size 17px
+    line-height 400
+    transition .5s border
+    &_white
+      border-color white
+      color white
+    @media $lDesktopSmall
+      font-size 14px
+    &:focus + ^[0]__placeholder,
+    &.notempty + ^[0]__placeholder
+      dn()
+  &__textarea
+    w 100%
+    h 116px
+    overflow hidden
+    resize none
+    padding 11px 18px
+    border 2px solid #ececec
+    bgc transparent
+    color $dark
+    font-family $os
+    fontify 14px 400 24px
+    transition .5s border
+    &:focus + ^[0]__placeholder,
+    &.notempty + ^[0]__placeholder
+      dn()
+  &__sbm
+    pos relative
+    font-family $os
+    mt 50px
+    bgc $red
+    color white
+    fontify 13px 700 50px
+    w 255px
+    cursor pointer
+    text-align left
+    pl 66px
+    transition .7s background
+    &:after
+      content ""
+      pos absolute
+      size 35px 19px
+      background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAATBAMAAADojanHAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAD1BMVEX///////////////////+Rd1MVAAAABHRSTlMArj3p00sEkgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAmSURBVBjTY2BAAowKDOiAyQhDiEF5gJS5oAMHIgzDYhadFUFCFQATdQi/Wu/E0QAAAABJRU5ErkJggg==") no-repeat center
+      r 66px
+      t 16px 
+      transition .7s right
+    &:hover
+      background-color #c91a20
+      &:after
+        r 56px
+  &__select
+    h 36px
+    bgc #fff
+    border 2px solid #b6b6b6
+    w auto
+    cursor pointer
+    transition .5s border
+    &.warning
+      border-color #ed1c24
+  &__placeholder
+    pos absolute
+    z-index -1
+    l 0 
+    t 0
+    color black
+    fontify 15px 300 30px
+    text-overflow ellipsis
+    white-space nowrap
+    overflow hidden
+    max-width 100%
+    span
+      color #e31e25
+      fontify 15px 300 30px
+      pos relative
+      t 0
+    &_white
+      color white
+      span 
+        color white
+  &__col
+    w calc(50% - 30px)
+    &_wide
+      w calc(100% - 212px)
+    &_short
+      w 162px
+    @media $LandscapeMedium
+      w 100%
+      & + &
+        mt 22px
+  &__row
+    display flex
+    justify-content space-between
+    pos relative
+    w 100%
+    @media $LandscapeMedium
+      flex-direction column
+    & + &
+      mt 32px
+      @media $LandscapeMedium
+        mt 22px
+  &__fileover
+    w 100%
+    pos relative
+    pt 14px
+    pb 14px
+    border-bottom 1px solid white
+    transition .5s border
+    &.warning
+      border-color #ed1c24
+    & + &
+      mt 20px
+  &__file
+    pos absolute
+    w 0
+    h 0
+    l 0
+    t 0
+    opacity 0
+    &name
+      ib()
+      pos relative
+      l 26px
+      cursor pointer
+      color white
+      fontify 14px 700 14px
+      letter-spacing .1em
+      text-transform uppercase
+      border-bottom 1px solid alpha(white, .25)
+      transition .5s border
+      @media $lDesktopSmall
+        font-size 12px
+      &.choosed,
+      &:hover
+        border-color transparent
+      &:after
+        content "*"
+        pos absolute
+        r -11px
+        fontify 23px 400 14px
+        t -3px
+      &:before
+        content ""
+        pos absolute
+        l -24px
+        t 3px
+        size 16px 8px
+        background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAICAMAAADHqI+lAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAe1BMVEX////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////QYBnOAAAAKHRSTlMAFJLi/uaFBRrhukMXERM+1IeisgE0t8xM8EeJRFvnRmnsaKQ1uVUVNSas3QAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAABYSURBVAjXRc1ZEkAwEATQJvZ9jxC74P4nRATvr6eqewBNJ8ahmJYNx/X8IHxEcZIiywuUFZWAmoE1AGm5BHQ92PAf+DjNWK7KqipUbLhGxTcKadfJ+/WOJ3rfCXxQ+WZgAAAAAElFTkSuQmCC") no-repeat center
+      &.choosed + ^[-1]delete
+        visibility visible
+        cursor pointer
+      &.choosed:after
+        content ""
+    &delete
+      ib()
+      visibility hidden
+      mt 3px
+      ml 32px
+      size 9px
+      background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJBAMAAAASvxsjAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAKlBMVEX///////////////////////////////////////////////////////9q+00tAAAADXRSTlMA0Do74eI5bGtqOM7MEv0urwAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAA3SURBVAjXYxBiYGAWYFBRYDBNYGByYg5jYGBQLU0Akhw3GUDsKQoMDExRTE4MDKYLQMp2AbkHAKcGB4WerKhTAAAAAElFTkSuQmCC") no-repeat center
+      
+.fakecheckbox
+  ib()
+  pos relative
+  margin 10px 0
+  &__label
+    ib()
+    color black
+    fontify 15px 300 25px
+    pos relative
+    pl 37px
+    pt 7px
+    a:not([class])
+      color black
+      fontify 15px 300 25px
+      border-bottom 1px solid
+      transition .7s border
+      &:hover
+        border-color transparent
+    &:before 
+      content ""
+      pos absolute
+      l 0px
+      t 6px
+      size 21px
+      border 2px solid black
+      cursor pointer
+      transition .5s border
+    &:after
+      content ""
+      pos absolute
+      size 15px 13px
+      background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAANCAMAAABBwMRzAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAilBMVEXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiX///8U4qu7AAAALHRSTlMAJLsPHOEV2PlHzfxUCsH+Ywa0cwOng034ZgGYlLVYiKPKpLHUvQfeyA24E1OiUuEAAAABYktHRC3N2kE9AAAACXBIWXMAAAsSAAALEgHS3X78AAAAbElEQVQI11XO2Q6CUAxF0TIpMsgoKuAAoqDu//8+AxjupQ9NV9K0R0Qrw7R02g6mxs0Wd6doefiBYrgnihWTFLL56NjyAxQTj6ezSFlBPS9e8K9yg3v5P9vgtvDIl7cd8HxpsXqG9yr257vMP2BSB3jxGCtXAAAAAElFTkSuQmCC") no-repeat center
+      l 5px
+      t 12px
+      opacity 0
+      cursor pointer
+      transition .5s opacity
+    &_white
+      color white
+      a:not([class])
+        color white
+      &:before
+        border-color white
+      &:after
+        background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAANCAMAAABBwMRzAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAh1BMVEX///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8SV0uDAAAALHRSTlMAJLsPHOEV2PlHzfxUCsH+Ywa0cwOng034ZgGYlLVYiKPKpLHUvQfeyA24E1OiUuEAAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAAAbElEQVQI11XO2Q6CUAxF0TIpMsgoKuAAoqDu//8+AxjupQ9NV9K0R0Qrw7R02g6mxs0Wd6doefiBYrgnihWTFLL56NjyAxQTj6ezSFlBPS9e8K9yg3v5P9vgtvDIl7cd8HxpsXqG9yr257vMP2BSB3jxGCtXAAAAAElFTkSuQmCC") no-repeat center
+  &__truecheck
+    pos absolute
+    l 0
+    t 0
+    w 0
+    h 0
+    border 0
+    opacity 0
+    &:checked + ^[0]__label:after
+      opacity 1
+    &.warning + ^[0]__label:before 
+      border-color #ed1c24
+    &.warning + ^[0]__label_white:before 
+      border-color #bf0209
+    
+.totop
+  pos fixed
+  z-index 5
+  b 20px
+  r 20px
+  cursor pointer
+  size 44px
+  border-radius 50%
+  box-shadow 0 6px 19px rgba(0, 0, 0, 0.12)
+  visibility hidden
+  opacity 0
+  background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAKBAMAAABLZROSAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAMFBMVEX///////////////////////////////////////////////////////////////9Or7hAAAAAD3RSTlMAPTz08p6hA6DzCennlZZZY9tOAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAEhJREFUCNdjYAACIQYoYDRRgLKE/ztBhezDvkAEhb+W5ztBhMIZysCCwl8LGNhBgiAhBoaKnwoMq4FCDAzs/acYGK+DtdUpAACFthD1OC0MSwAAAABJRU5ErkJggg==") no-repeat center #e76f17
+  transition .5s visible, .5s box-shadow, .5s opacity
+  &:hover
+    box-shadow none
+  &.visible
+    visibility visible
+    opacity 1
+      
+.breadcrumbs
+  color $grey
+  pos relative
+  &__href
+    color $grey
+    fontify 15px 400 18px
+    border-bottom 1px solid
+    transition .5s border
+    &:hover
+      border-color transparent
+    @media $lDesktopMedium
+      fontify 13px 400 18px
+  &__delim
+    padding 0 3px
+    fontify 15px 400 18px
+    @media $lDesktopMedium
+      fontify 13px 400 18px
+  & + h1:not([class])
+    mt 15px
+
+input.warning,
+textarea.warning
+  border-color $red
+
+.hidden-block
+  display none

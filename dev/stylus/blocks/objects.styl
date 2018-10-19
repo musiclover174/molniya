@@ -1,0 +1,371 @@
+.content_objects
+  pos relative
+  z-index 1
+  background-color black
+  height calc(100vh - 97px)
+  min-height 850px
+  display flex
+  align-items stretch
+  pb 103px
+  @media $lDesktopSmall
+    pb 60px
+    min-height 610px
+  @media $desktopMin
+    h auto
+    min-height inherit
+    pb 80px
+  & + .footer
+    mt 0
+  .breadcrumbs,
+  .breadcrumbs + h1:not([class])
+    pos relative
+    z-index 1
+    color white
+  .breadcrumbs__href
+    color white
+  & > .container
+    display flex
+    flex-direction column
+  &.change
+    .objects__content
+      l -20px
+      opacity 0
+    .objects__bg
+      opacity 0
+    
+.objects
+  &__bg
+    pos absolute
+    z-index 0
+    t 0
+    l 0
+    w 100%
+    h 100%
+    opacity .3
+    background-size cover
+    background-position center
+    background-repeat no-repeat
+    background-attachment fixed
+    transition .7s opacity
+  &__over
+    pos relative
+    z-index 1
+    display flex
+    justify-content space-between
+    align-items stretch
+    flex-grow 1
+    pt 40px
+    @media $lDesktopSmall
+      pt 0
+    @media $desktopMin
+      flex-direction column
+      align-items flex-start
+      justify-content flex-start
+  &__col
+    display flex
+    flex-direction column
+    align-items flex-start
+    w calc(50% - 31px)
+    @media $desktopMax
+      w calc(50% - 20px)
+    @media $desktopMin
+      w 100%
+  &__selects
+    display flex
+    justify-content space-between
+    mb 57px
+    w 100%
+    pr 65px
+    flex-shrink 0
+    @media $lDesktopSmall
+      mb 40px
+      pr 46px
+    @media $LandscapeMin
+      pr 25px
+    @media $PortraitMedium
+      flex-direction column
+      align-items flex-start
+      pr 0
+    .choices
+      w calc(50% - 31px)
+      @media $desktopMax
+        w calc(50% - 20px)
+      @media $PortraitMedium
+        w 100%
+        & + .choices
+          mt 20px
+    .choices__inner
+      h 38px
+      bgc transparent
+      border-bottom 2px solid white
+      color white
+    .choices[data-type*="select-one"]:after
+      background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAKCAMAAABPErQ/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAANlBMVEX///////////////////////////////////////////////////////////////////////8BOg0gAAAAEXRSTlMAobQkJr09QrYQwy0PHMfT18WXIcIAAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAAAMElEQVQI133KtwEAIAzAMNNLaP9fS4AdL1oMYHjZn+7qCVFNmVLFSm3Qxxz9HLL02Q9pANOWYGXPAAAAAElFTkSuQmCC") no-repeat center
+    .choices__list--dropdown
+      top calc(100% - 4px)
+    .choices__list--single
+      pr 21px
+  &__select
+    w calc(50% - 31px)
+    h 34px
+    cursor pointer
+    background transparent
+    border 0
+    border-bottom 2px solid white
+    color white
+  &__scroll
+    pos relative
+    overflow-y auto
+    overflow-x hidden
+    w 100%
+    @media $desktopMin
+      max-height 335px
+    @media $PortraitMedium
+      h 80vh
+      max-height 500px
+  &__elem
+    cursor pointer
+    mr 65px
+    padding 37px 42px 35px 41px
+    bgc alpha(white, .08)
+    transition .7s background
+    @media $lDesktopSmall
+      mr 45px
+      padding 25px 25px 23px 29px
+    @media $LandscapeMin
+      mr 25px
+    & + &
+      mt 14px
+      @media $lDesktopSmall
+        mt 10px
+    &:hover
+      bgc $red
+    &-name
+      color white
+      fontify 26px 700 30px
+      white-space nowrap
+      overflow hidden
+      text-overflow ellipsis
+      @media $lDesktopSmall
+        fontify 18px 700 24px
+    &-address
+      pos relative
+      opacity .5
+      color white
+      fontify 21px 300 31px
+      mt 15px
+      pl 32px
+      transition .7s opacity
+      @media $lDesktopSmall
+        fontify 15px 300 25px
+        pl 22px
+        mt 8px
+      &:before
+        content ""
+        pos absolute
+        l 0
+        t 3px
+        size 17px 23px
+        background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAXCAMAAADa6lTVAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABaFBMVEX///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////9bEQlHAAAAd3RSTlMAAUun1eqqUAIawvy2eGV3t/vHHiTjzyom5wTNxgwIvQdk9BzU+dhnGPJuy5N6+o9Zh4KJ/UUS91wZOv4RKUoD9lIVLSUiDglOL/B9dA2gYq97aKHIR9q4TPhexbswV0E9kOTTpeaNG1rvvpveKF8zuQvh0VGMW2uEziIAAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAABFklEQVQY012PV1fCQBSEBwxBIwqBiAgmahQL6iqa2BJBaRbE3nvvqNjy992EIOg83Jnzzd495wJUDmcd42JYdz1sNXCNnqZmr4/3B8pAaAm2WiHkbxNMD0faRfux1MF0UuuSu+noifb2Af0DMUoGh4BhMjIaj44B4xFAVFRMTNIeU2QaM5qOWUNAgpjrybl5pIw0MkYWqpajZIFfRNZYgkScEJfzlKzIOhJKAfCtAmva+garbAJb27TaISFA9ezu7QOBg0PzqKPjyjlgg0nTTvhTG5xp5+VwcVmwPHx1bVe5m1vLY/JdZf2eT9OZesj/fohHzgE8PUtVUiQveFXcqFHcpXNvtQCl9w9S/EPwaXzhn75LdvgBswEm4Pkbzl0AAAAASUVORK5CYII=") no-repeat center
+        background-size cover
+        @media $lDesktopSmall
+          size 11px 16px
+    &:hover &-address
+      opacity 1
+  &__content
+    pt 87px
+    display flex
+    flex-direction column
+    align-items stretch
+    justify-content space-between
+    flex-grow 1
+    w 100%
+    pos relative
+    l 0
+    transition .7s opacity, .7s left
+    @media $lDesktopSmall
+      pt 74px
+    @media $desktopMin
+      pt 0
+      mt 80px
+    &-top
+      display flex
+      flex-direction column
+      align-items flex-start
+      @media $desktopMin
+        mb 40px
+    &-bottom
+      display flex
+      justify-content space-between
+      & ^[0]__col:last-child
+        justify-content flex-end
+        align-items center
+        @media $LandscapeMin
+          mt 40px
+          align-items flex-start
+      @media $LandscapeMin
+        flex-direction column
+        align-items flex-start
+  &__place
+    color white
+    fontify 51px 900 51px
+    border-bottom 2px solid
+    transition .7s border
+    @media $lDesktopSmall
+      fontify 36px 900 36px
+    &:hover
+      border-color transparent
+  &__address
+    pos relative
+    opacity .5
+    color white
+    fontify 21px 300 31px
+    mt 27px
+    pl 30px
+    @media $lDesktopSmall
+      mt 17px
+      pl 20px
+      fontify 15px 300 25px
+    &:before
+      content ""
+      pos absolute
+      l 0
+      t 3px
+      size 16px 23px
+      background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAXCAMAAAA1KD/rAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABBVBMVEX///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////+fZH5/AAAAVnRSTlMAFiguIAUBMW2AfXpNDQZYSBgKbnUeWXMEU3kzexcJNhkCXGdxQid4UREcfw9KQVpwQDp0PFBUHzVvP2w5O2kQTiZGJHxPCCtVIWp2MhNLZF1+YUlyLPBv5iYAAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAABAElEQVQY01VQCVOCQBh9oC4uWoZZINCBqAhYWXYIlUcpaqem/f+/0q47OPZmZ993zPsuYANJzmRzSEGUPFULtFDcE/5+ST3QCMrKYeVokz/WNZExqqbEyLJPgNPM2Tng1FwCUm8ATc/UacuBr8oIwjZ8+8JA1rwErqqwOsB13mHamy5w6/KHu3te84EasOroRUD8SFjgSQee+wioj4E9zGHkxaxGC6TzArx64wqd8C5NPscASKYKmwazPtM6bildak7nnIJwJHznbSaMYiQ279ltESi/NwTFqfZj/Mn+r8jYXuh7AWhLeXsy5kzJzwI7WK2tpbQbSLrhCv/wu06E8Qcqzxq+Xb1bcAAAAABJRU5ErkJggg==") no-repeat center
+      background-size cover
+      @media $lDesktopSmall
+        size 11px 16px
+  &__info
+    &-row
+      & + &
+        mt 43px
+        @media $lDesktopSmall
+          mt 30px
+    &-title
+      color white
+      opacity .5
+      fontify 21px 300 31px
+      @media $lDesktopSmall
+        fontify 15px 300 25px
+    &-value
+      color white
+      fontify 41px 300 41px
+      mt 18px
+      @media $lDesktopSmall
+        fontify 30px 300 30px
+        mt 10px
+  &__more
+    color white
+    fontify 17px 700 21px
+    border-bottom 1px solid
+    mb 40px
+    transition .7s border
+    @media $lDesktopSmall
+      fontify 13px 700 17px
+      mb 25px
+    &:hover
+      border-color transparent
+  &__order
+    pos relative
+    bgc $red
+    color white
+    fontify 17px 700 61px
+    w 100%
+    cursor pointer
+    text-align center
+    transition .7s background
+    @media $lDesktopSmall
+      fontify 13px 700 50px
+    @media $LandscapeMin
+      max-width 250px
+    &:after
+      content ""
+      display inline-block
+      vertical-align middle
+      ml 17px
+      pos relative
+      r 0
+      size 35px 19px
+      background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAATBAMAAADojanHAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAD1BMVEX///////////////////+Rd1MVAAAABHRSTlMArj3p00sEkgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAmSURBVBjTY2BAAowKDOiAyQhDiEF5gJS5oAMHIgzDYhadFUFCFQATdQi/Wu/E0QAAAABJRU5ErkJggg==") no-repeat center
+      transition .7s right
+    &:hover
+      background-color #c91a20
+      &:after
+        r -5px
+
+.plan
+  &__over
+    mt 40px
+    @media $LandscapeMax
+      overflow-x auto
+  &__relative
+    pos relative
+    ib()
+    max-width 100%
+    @media $LandscapeMax
+      max-width inherit
+      w 1000px
+  &__floors
+    pos absolute
+    z-index 2
+    t 12px
+    r 12px
+    w 86px
+    display flex
+    flex-direction column
+    align-items flex-start
+    &-tab
+      pos relative
+      &:not(.active)
+        dn()
+  &__floor
+    cursor pointer
+    w 100%
+    color white
+    fontify 14px 600 41px
+    text-align center
+    bgc #646464
+    transition .7s background
+    &:hover,
+    &.active
+      bgc #e21d24
+    & + &
+      mt 2px
+  &__point
+    cursor pointer
+    pos absolute
+    size 14px 20px
+    background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAUCAMAAACK2/weAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAn1BMVEVkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGT///9LClceAAAAM3RSTlMAEIDR+EbrQvtEDOeoDXKwdcPkC8nzk+z63bih/k73fiwE32cG2ttKS6cR4eI//IIBrqpJefKqAAAAAWJLR0Q0qbHp/QAAAAlwSFlzAAALEgAACxIB0t1+/AAAAKRJREFUGNNFjVcCgjAUBFcQRMEGinQEewN17383UwTmJztJ3j4AGBnmeGwaIygsmwrbkjZx+MeZAjNXPnie/OLOsRDHciaulyKssCb9QA4FPrnBlgx1ZUjuEJGGVoOMEJOJ1oSMkZKZWmhlZIpcFBblfl8WIuSoavbUFXAY9CBmjqfOzkfZcen0qjfctN204f6Q9rz/Fa+GbF7oacl2MLw/37cKPy2IHI2W0UHnAAAAAElFTkSuQmCC') no-repeat center
+    transition .7s opacity
+    &:hover
+      opacity .5
+    &_empty
+      background-image url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAUCAMAAACK2/weAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAn1BMVEXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiX////yWiZdAAAAM3RSTlMAEIDR+EbrQvtDDOeoDXKwdcPkC8nzk+z63bih/k73fiwE32cG2ttKS6cR4eI//IIBrqqYN2CiAAAAAWJLR0Q0qbHp/QAAAAlwSFlzAAALEgAACxIB0t1+/AAAAKRJREFUGNNFjVcCgjAUBFcQRMEGinQEewN17383UwTmJztJ3j4AGBnmeGwaIygsmwrbkjZx+MeZAjNXPnie/OLOsRDHciaulyKssCb9QA4FPrnBlgx1ZUjuEJGGVoOMEJOJ1oSMkZKZWmhlZIpcFBblfl8WIuSoavbUFXAY9CBmjqfOzkfZcen0qjfctN204f6Q9rz/Fa+GbF7oacl2MLw/37cKPy2IHI2W0UHnAAAAAElFTkSuQmCC")
+  &__hint
+    pos absolute
+    bgc white
+    box-shadow 0.5px 0.9px 10px rgba(136, 136, 136, 0.15)
+    max-width 327px
+    padding 30px 30px 27px 30px
+    opacity 0
+    visibility hidden
+    transition .7s opacity, .7s visibility
+    &.hide
+      t -10000px
+      l -10000px
+    &.show
+      opacity 1
+      visibility visible
+  &__dsc
+    fontify 15px 400 25px
+    mt 20px
+    &:first-child
+      mt 0
+  &__title
+    fontify 18px 700 25px
+    mt 20px
+    &:first-child
+      mt 0
+  &__bg
+    max-width 100%

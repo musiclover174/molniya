@@ -1,0 +1,218 @@
+.inews
+  mt 73px
+  pos relative
+  
+.news
+  &__title
+    fontify 60px 900 64px
+    mb 50px
+    @media $lDesktopSmall
+      fontify 48px 900 52px
+    @media $desktopMax
+      fontify 46px 700 50px
+    @media $desktopMin
+      fontify 36px 700 42px
+      mb 35px
+    @media $LandscapeMax
+      fontify 30px 700 36px
+      mb 25px
+  &__href
+    pos absolute
+    r 80px
+    t 6px
+    color black
+    fontify 21px 500 21px
+    border-bottom 1px solid
+    transition .7s border
+    @media $lDesktopSmall
+      fontify 18px 500 18px
+    &:hover
+      border-bottom transparent
+    @media $LandscapeMedium
+      ib()
+      pos relative
+      t 0
+      mt 40px
+  &__grid
+    display flex
+    flex-wrap wrap
+    ml -62px
+    w calc(100% + 62px)
+  &__elem
+    w calc(25% - 62px)
+    ml 62px
+    mb 54px
+    @media $desktopMax
+      w calc(50% - 62px)
+    @media $LandscapeMin
+      w calc(100% - 62px)
+    &_wide
+      w calc(100% - 62px)
+      display flex
+      justify-content space-between
+      align-items center
+      @media $desktopMin
+        flex-direction column
+        justify-content flex-start
+        align-items flex-start
+      & ^[-1]-content
+        w calc(50% - 31px)
+        @media $desktopMin
+          w 100%
+      & ^[-1]-href
+        fontify 27px 500 37px
+        @media $lDesktopSmall
+          fontify 24px 500 34px
+        @media $desktopMin
+          fontify 18px 500 28px
+      & ^[-1]-text
+        max-width none
+    &_revert
+      flex-direction row-reverse
+      @media $desktopMin
+        flex-direction column
+        justify-content flex-start
+        align-items flex-start
+      & ^[-1]-side
+        mr 0
+        ml 62px
+        @media $desktopMin
+          ml 0
+    &-side
+      w calc(50% - 31px)
+      mr 62px
+      @media $desktopMin
+        mr 0
+        w 100%
+        mb 25px
+    &-date
+      color #8c8c8c
+      fontify 15px 300 19px
+      mb 7px
+    &-text
+      fontify 15px 300 25px
+      mt 17px
+      max-width 240px
+      @media $desktopMax
+        max-width none
+    &-img
+      w 100%
+      transition .7s opacity
+      &:hover
+        opacity .85
+      @media $LandscapeMax
+        w 100%
+    &-href
+      color black
+      fontify 21px 500 31px
+      border-bottom 1px solid
+      transition .7s border
+      @media $lDesktopSmall
+        fontify 18px 500 28px
+      &:hover
+        border-color transparent
+        
+  &__inner
+    &-date
+      color $grey
+      fontify 17px 300 25px
+      mb 37px
+      @media $lDesktopSmall
+        fontify 15px 300 23px
+    &-content
+      padding 0 30px
+      max-width 1150px
+      @media $LandscapeMax
+        padding 0
+    &-hrefs
+      display flex
+      justify-content space-between
+      align-items center
+      mt 95px
+      pb 10px
+      @media $lDesktopSmall
+        pb 0
+        mt 75px
+      @media $LandscapeMax
+        justify-content flex-start
+        align-items flex-start
+    &-prev,
+    &-next
+      pos relative
+      color white
+      fontify 16px 700 60px
+      bgc $red
+      transition .7s background
+      @media $lDesktopSmall
+        fontify 13px 700 50px
+      @media $LandscapeMax
+        dn()
+      &.disabled
+        opacity .5
+        cursor default
+      &:not(.disabled):hover
+        bgc #c91a20
+    &-prev
+      pr 39px
+      pl 105px
+      @media $lDesktopSmall
+        pl 86px
+        pr 32px
+      &:before
+        content ""
+        pos absolute
+        size 43px 24px
+        t 18px
+        l 39px
+        background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAYCAMAAABUbfTxAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAhFBMVEX///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////9hWbqAAAAAK3RSTlMAPnL4KHP3SHRHdfZ2d0Z49XlFg7ZwsNW7BavgIeEEIqriAyOo46ckpiAJuvD2KwAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAABzSURBVDjLtc7LGkJQFEDhXZJ7IZRbiIN4//fLzMy3zqA1/gdLZO8kuLNxodS8WpTaOtSh1PUw9TkNvBul9/AfNApjSh9rErBSydbni5VJXpQVfdhwzfG7qBuOWy3ccfxpu57jQQsrDTyqieNZfTl2l2PwAxY5DRTpotzCAAAAAElFTkSuQmCC") no-repeat center
+        transition .7s left
+        background-size cover
+        @media $lDesktopSmall
+          t 15px
+          l 32px
+          size 35px 19px
+      &:not(.disabled):hover:before
+        l 35px
+        @media $lDesktopSmall
+          l 29px
+    &-next
+      pl 39px
+      pr 105px
+      @media $lDesktopSmall
+        pr 86px
+        pl 32px
+      &:before
+        content ""
+        pos absolute
+        size 43px 24px
+        t 18px
+        r 39px
+        background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAYCAMAAABUbfTxAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAhFBMVEX///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////9hWbqAAAAAK3RSTlMAPnL4KHP3SHRHdfZ2d0Z49XlFg7ZwsNW7BavgIeEEIqriAyOo46ckpiAJuvD2KwAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAABzSURBVDjLtc7LGkJQFEDhXZJ7IZRbiIN4//fLzMy3zqA1/gdLZO8kuLNxodS8WpTaOtSh1PUw9TkNvBul9/AfNApjSh9rErBSydbni5VJXpQVfdhwzfG7qBuOWy3ccfxpu57jQQsrDTyqieNZfTl2l2PwAxY5DRTpotzCAAAAAElFTkSuQmCC") no-repeat center
+        transform scaleX(-1)
+        transition .7s right
+        background-size cover
+        @media $lDesktopSmall
+          t 15px
+          r 32px
+          size 35px 19px
+      &:not(.disabled):hover:before
+        r 35px
+        @media $lDesktopSmall
+          r 29px
+    &-href
+      mt 2px
+      color black
+      fontify 15px 700 15px
+      border-bottom 1px solid
+      transition .7s border
+      @media $lDesktopSmall
+        fontify 13px 700 13px
+        mt 1px
+      &:hover
+        border-color transparent
+        
+
+.index .news__grid
+  mb -62px
+  @media $desktopMin
+    mb -121px

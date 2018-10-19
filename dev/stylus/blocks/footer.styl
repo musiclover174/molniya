@@ -1,0 +1,133 @@
+.footer
+  background-color #060606
+  pos relative
+  z-index 1
+  pb 70px
+  mt 83px
+  @media $LandscapeMedium
+    pb 30px
+  &:before
+    content ""
+    pos absolute
+    t 0
+    l 0
+    z-index -1
+    size 100% 100%
+    background url('../i/footer-bg.jpg') no-repeat center
+    background-attachment fixed
+    background-size cover
+    opacity .2
+  &__nav
+    padding 76px 0 77px
+    border-bottom 1px solid alpha(white, .1)
+    mb 74px
+    @media $LandscapeMax
+      padding 36px 0 37px
+    @media $LandscapeMedium
+      dn()
+    &-list
+      display flex
+      align-items flex-start
+    &-item
+      & + &
+        ml 28px
+        @media $LandscapeMax
+          ml 18px
+    &-href
+      color white
+      fontify 15px 700 17px
+      transition .7s color
+      @media $lDesktopSmall
+        fontify 13px 700 15px
+      &.active,
+      &:hover
+        color $red
+  &__main
+    mb 66px
+    @media $LandscapeMedium
+      pt 36px
+    @media $PortraitMax
+      mb 36px
+  &__row
+    display flex
+    justify-content space-between
+    @media $desktopMin
+      flex-direction column
+      justify-content flex-start
+      align-items flex-start
+  &__col
+    w calc(50% - 31px)
+    @media $desktopMin
+      w 100%
+    & + &
+      ml 62px
+      @media $desktopMin
+        ml 0
+        mt 20px
+  &__copy
+    color white
+    fontify 15px 300 25px
+    &-text
+      color white
+      fontify 15px 300 25px
+      max-width 465px
+      @media $desktopMin
+        max-width none
+  &__info
+    display flex
+    flex-direction column
+    align-items flex-start
+    & + &
+      mt 30px
+    &-title
+      color alpha(white, .5)
+      fontify 15px 300 25px
+      mb 7px
+    &-phone
+      color white
+      fontify 24px 500 25px
+      @media $desktopMax
+        fontify 20px 500 21px
+    &-address
+      color white
+      fontify 15px 300 25px
+    &-mail
+      mt 4px
+      color white
+      fontify 15px 300 17px
+      border-bottom 1px solid white
+      transition .7s border
+      &:hover
+        border-color transparent
+  &__bottom
+    display flex
+    justify-content space-between
+    @media $PortraitMax
+      flex-direction column
+      justify-content flex-start
+      align-items flex-start
+  &__dextra
+    color silver
+    font-family Verdana, Geneva, sans-serif
+    fontify 9px 400 14px
+    text-transform uppercase
+    letter-spacing .18em
+    mt -7px
+    pos relative
+    @media $PortraitMax
+      ml 85px
+      mt 15px
+    span
+      pos absolute
+      t 3px
+      r calc(100% + 10px)
+      bgc alpha($red, .6)
+      color white
+      font-family Arial
+      fontify 12px 900 21px
+      text-transform uppercase
+      letter-spacing .1em
+      padding 0 6px
+      transition .7s background
+    &:hover span
+      bgc $red

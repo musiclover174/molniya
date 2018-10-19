@@ -1,0 +1,27 @@
+header.header
+  span.header__shadow
+  .container
+    a(href="#").header__logo
+      img(src="img/logo.png", alt="").header__logo-img
+    aside.header__right
+      nav.header__menu
+        ul.header__menu-list
+          li.header__menu-item
+            a(href="#").header__menu-href.active О компании
+          li.header__menu-item
+            a(href="#").header__menu-href Новости
+          li.header__menu-item.header__menu-item_sub
+            a(href="#").header__menu-href Объекты компании
+            .header__menu-sublist
+              a(href="#").header__menu-subhref Торговые комплексы
+              a(href="#").header__menu-subhref Торгово-офисные центры
+              a(href="#").header__menu-subhref Street-retail
+          li.header__menu-item
+            a(href="#").header__menu-href Продажа активов
+          li.header__menu-item
+            a(href="#").header__menu-href FAQ
+          li.header__menu-item
+            a(href="#").header__menu-href Контакты
+      a(href="tel:+73512160522").header__phone +7 (351) 216-05-22
+      button(type="button", aria-label="открыть мобильное меню").burger__button.js-burger
+        span.burger__button-meat

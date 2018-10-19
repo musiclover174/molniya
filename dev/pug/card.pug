@@ -1,0 +1,176 @@
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+    section.content.content_object
+      span.objects__bg(style="background-image: url('img/objects1.jpg')")
+      section.object__top
+        section.container
+          .object__top-upper
+            section.breadcrumbs
+              a(href="#").breadcrumbs__href Главная
+              span.breadcrumbs__delim / 
+            h1 Торговый комплекс SPAR
+            section.object__sub
+              p.object__sub-address г.Челябинск, ул.Труда, д.166
+              p.object__sub-text Торговый комплекс SPAR Труда открыт с 2004 года. 
+          section.object__info
+            .object__info-col
+              .object__info-elem
+                p.object__info-title Общая площадь (GLA)
+                p.object__info-value 13 057 кв.м.
+              .object__info-elem
+                p.object__info-title Торговая площадь (GBA)
+                p.object__info-value 10 000 кв.м.
+              .object__info-elem
+                p.object__info-title Количество арендаторов
+                p.object__info-value 128
+              .object__info-elem
+                p.object__info-title Проходимость
+                p.object__info-value 2,5 млн./в год
+            .object__info-col.object__info-col_right
+              a(href="#", data-fancybox, data-src="#betenant", data-id="2").objects__order.js-object-order Оставить заявку
+      section.object__bottom
+        section.container
+          section.object__about
+            p.object__title Об объекте
+            .object__about-row
+              p.object__about-label Якорные арендаторы
+              .object__about-text
+                ul
+                  li Гипермаркет SPAR
+                  li Первый и единственный в городе гипермаркет Шуб от производителя – г.Пятигорск. Площадь магазина 1 100 кв.м.
+                  li Медицинский центр – Жар-птица.
+            .object__about-row
+              p.object__about-label Другие арендаторы
+              .object__about-text
+                p В комплексе работают более 20 арендаторов, среди которых «Галамарт», «Gipfel», «Рифарм», «Царь Платок» и другие популярные бренды.
+            .object__about-row
+              p.object__about-label Дополнительная информация
+              .object__about-text
+                p В торговой галереи представлены все необходимые товары – от продуктов до одежды, что позволяет семейным парам найти любые повседневные товары в одном месте. 
+              
+          section.object__gallery
+            p.object__title Галерея
+            .object__gal-over
+              .swiper-container.object__gal.js-object-gallery
+                .swiper-wrapper
+                  .swiper-slide(style="background-image: url('img/objects1.jpg')")
+                  .swiper-slide(style="background-image: url('img/objects2.jpg')")
+              .swiper-buttons
+                .swiper-button-prev
+                .swiper-button-next
+              
+          section.object__feats
+            p.object__title Основные преимущества нашего Торгового Комплекса
+            ul.object__feats-list
+              li(data-type="location").object__feats-item
+                p.object__feats-item-title Локация
+                p.object__feats-item-text Центральный район г. Челябинска, ежедневно мимо ТК проезжает автомобильный трафик до 50 000 машин. ТК расположен по правой стороне дороге, что создает удобство для покупателей, проезжающих из центра города в спальные районы в вечерние часы по пути: работа-дом
+              li(data-type="infrastructure").object__feats-item
+                p.object__feats-item-title Развитая инфраструктура
+                p.object__feats-item-text создающая высокий трафик в данную часть города. В ЖК Западный луч работает МФЦ, генерирующий высокий трафик населения в данную точку города.  Через дорогу от ТК расположен единственный в городе зоопарк, привлекающий семьи с детьми. С этой же стороны работает один из ледовых дворцов города – «Уральская Молния». Неподалеку размещена семейная клиника «Лотос».
+              li(data-type="new").object__feats-item
+                p.object__feats-item-title Новый жилой массив
+                p.object__feats-item-text С обеих сторон от ТК  размещены жилые комплексы «Западный Луч» и «Манхэттен», рассчитанные на жителей с высоким уровнем дохода. Дома заселены. Активно продолжается застройка следующих домов. 
+              li(data-type="equipment").object__feats-item
+                p.object__feats-item-title Оснащение
+                p.object__feats-item-text Помещения для аренды имеют качественный ремонт, снабжены пожарной автоматикой с системой оповещения, что обеспечивает высокий уровень безопасности работы Торгового комплекса. 
+              
+          section.object__layout
+            p.object__title Планировка
+            include blocks/plan
+          
+          section.object__map-over
+            p.object__title Расположение
+            script(type="text/javascript", src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
+            .object__map.js-contacts-map(data-coords="55.185479, 61.285728")
+            
+          section.object__manager
+            p.object__title Менеджер объекта
+            .contacts__managers
+              .contacts__managers-item
+                aside.contacts__managers-imgover
+                  img(src="img/manager1.jpg").contacts__managers-img
+                .contacts__managers-content
+                  p.contacts__managers-name Мигунова Елена Владимировна
+                  p.contacts__managers-place Директор Департамента имущественных отношений
+                  .contacts__managers-info
+                    .contacts__managers-info-row
+                      p.contacts__managers-info-title Телефон 
+                      a(href="tel:+73512160522").contacts__managers-info-value +7 (351) 216-05-22, доб. 9204
+                    .contacts__managers-info-row
+                      p.contacts__managers-info-title Сотовый телефон
+                      a(href="tel:+79128908120").contacts__managers-info-value  +7 912-890-81-20 
+                    .contacts__managers-info-row
+                      p.contacts__managers-info-title Индивидуальный e-mail: 
+                      a(href="mailto:e.migunova@ctmol.ru").contacts__managers-info-mail  e.migunova@ctmol.ru
+                    
+          section.object__lease
+            span.objects__bg(style="background-image: url('img/objects1.jpg')")
+            section.container
+              p.object__title.object__title_white Стать арендатором
+              p.object__lease-sub Обратите внимание, что поля, отмеченные звёздочкой, обязательны для заполнения.
+              form.object__lease-form
+                .object__lease-form-top
+                  .object__lease-col
+                    .object__lease-row
+                      input(type="text", data-req="req").common__input.common__input_white
+                      label.common__placeholder.common__placeholder_white Наименование организации 
+                        span *
+                    .object__lease-row
+                      input(type="text").common__input.common__input_white
+                      label.common__placeholder.common__placeholder_white Торговая марка
+                    .object__lease-row
+                      input(type="text", data-req="req").common__input.common__input_white
+                      label.common__placeholder.common__placeholder_white ФИО контактного лица
+                        span *
+                    .object__lease-row
+                      input(type="text", data-req="req").common__input.common__input_white.js-phone
+                      label.common__placeholder.common__placeholder_white Контактный телефон 
+                        span *
+                  .object__lease-col
+                    .object__lease-row
+                      input(type="text").common__input.common__input_white
+                      label.common__placeholder.common__placeholder_white Сайт
+                    .object__lease-row
+                      input(type="text", data-req="req").common__input.common__input_white
+                      label.common__placeholder.common__placeholder_white Электронная почта 
+                        span *
+                    .object__lease-row
+                      .object__lease-col
+                        input(type="text").common__input.common__input_white.js-digits
+                        label.common__placeholder.common__placeholder_white Желаемая площадь (кв.м.) От
+                      .object__lease-col
+                        input(type="text").common__input.common__input_white.js-digits
+                        label.common__placeholder.common__placeholder_white До
+                    .object__lease-row
+                      input(type="text").common__input.common__input_white
+                      label.common__placeholder.common__placeholder_white Сфера деятельности организации
+                .object__lease-form-bottom
+                  .fakecheckbox
+                    input(type="checkbox", value="", name="agreement3", checked)#agreement3.fakecheckbox__truecheck
+                    label(for="agreement3").fakecheckbox__label.fakecheckbox__label_white Даю согласие на обработку 
+                      a(href="#") персональных данных
+                  button(type="submit").object__lease-sbm Отправить
+            
+          section.object__others
+            p.object__title Другие торговые центры
+            .object__others-car.js-object-others.swiper-container
+              .swiper-wrapper
+                - for (var x = 0; x < 6; x++)
+                  .swiper-slide
+                    .object__others-imgover(style="background-image: url('img/other1.jpg')")
+                    .object__others-content
+                      a(href="#").object__others-name ТРК «Фиеста»
+                      p.object__others-place г.Челябинск, ул.Молодогвардейцев, д.7
+              .swiper-buttons
+                .swiper-button-prev.swiper-button-prev_dark
+                .swiper-button-next.swiper-button-next_dark
+            .object__others-allover
+              a(href="#").object__others-all Все объекты
+            
+    include layout/__footer
+    include layout/__scripts

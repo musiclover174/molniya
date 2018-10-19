@@ -1,0 +1,98 @@
+.popup
+  max-width 572px
+  w 90%
+  font-family MuseoSansCyrl
+  &__title
+    fontify 36px 900 40px
+    mb 20px
+    text-align center
+  &__subtitle
+    fontify 15px 300 25px
+    mb 30px
+    text-align center
+  &__row
+    display flex
+    justify-content space-between
+    pos relative
+    w 100%
+    @media $LandscapeMedium
+      flex-direction column
+    &_selects
+      justify-content flex-start
+      flex-direction column
+      align-items flex-start
+    &_popcheck
+      justify-content flex-start
+      flex-direction column
+      align-items center
+    & + &
+      mt 32px
+      @media $LandscapeMedium
+        mt 22px
+  &__sel
+    display flex
+    w 100%
+    pos relative
+    & + &
+      mt 32px
+    &-template
+      dn()
+  &__col
+    pos relative
+    w calc(50% - 30px)
+    @media $LandscapeMedium
+      w 100%
+      & + &
+        mt 22px
+  .choices
+    w calc(100% - 53px)
+    fontify 15px 300 30px
+    z-index 1
+    &.is-open
+      z-index 2
+  &__add-select
+    pos absolute
+    cursor pointer
+    r 0
+    b 0
+    border-radius 50%
+    size 24px
+    background-color white
+    border 2px solid #e31e25
+    &:after
+      content ""
+      pos absolute
+      t 50%
+      l 50%
+      size 12px
+      background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMAgMAAAArG7R0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACVBMVEXjHiXjHiX///+sPlgdAAAAAXRSTlMAQObYZgAAAAFiS0dEAmYLfGQAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAVSURBVAjXY2AQYWBAx6GhoWCMRQ4AQsACx/Vqqw0AAAAASUVORK5CYII=") no-repeat center
+      transform translate(-50%, -50%)
+      transition .7s transform
+      will-change transform
+    &:hover:after
+      transform translate(-50%, -50%) rotate(180deg)
+    &.hidden
+      dn()
+  &__remove-select
+    pos absolute
+    cursor pointer
+    r 0
+    b 0
+    border-radius 50%
+    size 24px
+    background-color white
+    border 2px solid #e31e25
+    &:after
+      content ""
+      pos absolute
+      t 50%
+      l 50%
+      size 12px 2px
+      background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAACAQMAAABWsa/UAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABlBMVEXjHiX///99NYAeAAAAAWJLR0QB/wIt3gAAAAlwSFlzAAALEgAACxIB0t1+/AAAAAtJREFUCNdjYAABAAAGAAFm9MlsAAAAAElFTkSuQmCC") no-repeat center
+      transform translate(-50%, -50%)
+      transition .7s transform
+      will-change transform
+    &:hover:after
+      transform translate(-50%, -50%) rotate(180deg)
+    &.hidden
+      dn()

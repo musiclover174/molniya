@@ -1,0 +1,57 @@
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+    section.content.content_objects.js-objects
+      span.objects__bg.js-objects-bg(style="background-image: url('img/objects1.jpg')")
+      section.container
+        section.breadcrumbs
+          a(href="#").breadcrumbs__href Главная
+          span.breadcrumbs__delim / 
+        h1 Объекты компании
+        secton.objects__over
+          aside.objects__col
+            .objects__selects
+              select.objects__select.js-object-sel.js-select
+                option(selected, value="0") Все объекты
+                option(value="1") Стрит-объекты
+                option(value="2") Гипермаркет
+              select.objects__select.js-object-sel.js-select
+                option(selected, value="0") Все города
+                option(value="1") Текст1
+            .objects__scroll.js-objects-scroll
+              .objects__elem.js-objects__elem(data-name="SPAR", data-address="г.Челябинск, ул.Братьев Кашириных, д.133", data-gla="7 890,9", data-gba="2 355,20", data-bg="img/objects2.jpg", data-href="#1", data-id="3")
+                p.objects__elem-name SPAR
+                p.objects__elem-address г.Челябинск, ул.Братьев Кашириных, д.133
+              .objects__elem.js-objects__elem(data-name="ТРК «Фиеста»", data-address="г.Челябинск, ул.Молодогвардейцев, д.7", data-gla="9 290,9", data-gba="1 455,20", data-bg="img/objects1.jpg", data-href="#2", data-id="3")
+                p.objects__elem-name ТРК «Фиеста»
+                p.objects__elem-address г.Челябинск, ул.Молодогвардейцев, д.7
+              .objects__elem.js-objects__elem(data-name="SPAR", data-address="г.Челябинск, ул.Братьев Кашириных, д.133", data-gla="4 890,9", data-gba="855,20", data-bg="img/objects2.jpg", data-href="#3", data-id="3")
+                p.objects__elem-name SPAR
+                p.objects__elem-address г.Челябинск, ул.Труда, д.166
+              .objects__elem.js-objects__elem(data-name="ТРК «Фиеста»", data-address="г.Челябинск, ул.Молодогвардейцев, д.7", data-gla="9 290,9", data-gba="1 455,20", data-bg="img/objects1.jpg", data-href="#4", data-id="3")
+                p.objects__elem-name ТРК «Фиеста»
+                p.objects__elem-address г.Челябинск, ул.Молодогвардейцев, д.7
+              .objects__elem.js-objects__elem(data-name="SPAR", data-address="г.Челябинск, ул.Братьев Кашириных, д.133", data-gla="4 890,9", data-gba="855,20", data-bg="img/objects1.jpg", data-href="#5", data-id="3")
+                p.objects__elem-name SPAR
+                p.objects__elem-address г.Челябинск, ул.Труда, д.166
+          main.objects__col
+            .objects__content
+              .objects__content-top
+                a(href="#").objects__place.js-objects-place ТРК «Фиеста»
+                p.objects__address.js-objects-address г.Челябинск, ул.Молодогвардейцев, д.7
+              .objects__content-bottom
+                .objects__col
+                  .objects__info-row
+                    p.objects__info-title Общая площадь (GLA)
+                    p.objects__info-value.js-objects-gla 7 890,9 кв.м.
+                  .objects__info-row
+                    p.objects__info-title Торговая площадь (GBA)
+                    p.objects__info-value.js-objects-gba 2 355,20 кв.м.
+                .objects__col
+                  a(href="#").objects__more.js-objects-more Подробнее об объекте
+                  a(href="#", data-fancybox, data-src="#betenant", data-id="2").objects__order.js-object-order Оставить заявку
+    include layout/__footer
+    include layout/__scripts

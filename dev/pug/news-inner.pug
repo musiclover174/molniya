@@ -1,0 +1,30 @@
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+    section.content
+      section.container
+        section.breadcrumbs
+          a(href="#").breadcrumbs__href Главная
+          span.breadcrumbs__delim / 
+          a(href="#").breadcrumbs__href Новости
+          span.breadcrumbs__delim / 
+        h1 Открытие нового отдела - Pelican kids Discount
+        p.news__inner-date 07 августа 2018
+        .news__inner-content
+          p В Детской Галереи Outlet Center, ТРК Фиеста,  открылся первый и единственный в России отдел Pelican kids Discount!
+          p Pelican KIDS — одежда, которая нравится и детям, и родителям! 
+          p От первой улыбки малыша до школьной скамьи, от беззаботных игр в песочнице до первого свидания в летнем лагере — Pelican создает одежду для идеального образа вашего ребенка в любой ситуации. 
+          img(src="img/text2.jpg")
+          p В магазине представлена модная и удобная детская одежда для девочек и мальчиков от рождения до 14 лет. В Pelican KIDS все именно так, как любят дети: ярко, впечатляюще, красиво! 
+          p Выбрать подходящую модель очень просто — то, что понравится вашему ребенку, обязательно понравится и вам, ведь помимо отличного дизайна и забавных игровых элементов, мы закладываем в каждую модель любовь к деталям, натуральным тканям и продуманной конструкции. В ассортименте бренда представлена одежда для яркой повседневности и для нескучной школы. 
+          p Pelican KIDS — пусть каждое мгновение счастливого детства запомнится!
+          img(src="img/text3.jpg")
+        .news__inner-hrefs
+          a.news__inner-prev.disabled Предыдущая новость
+          a(href="#").news__inner-href К списку новостей
+          a(href="#").news__inner-next Следующая новость
+    include layout/__footer
+    include layout/__scripts

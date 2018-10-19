@@ -1,0 +1,48 @@
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+    section.content
+      section.container
+        section.breadcrumbs
+          a(href="#").breadcrumbs__href Главная
+          span.breadcrumbs__delim / 
+        h1 Контакты
+        section.contacts__top
+          .contacts__col
+            p.contacts__top-label Адрес отдела арендных отношений
+            p.contacts__top-text г.Челябинск, Комсомольский проспект, д. 113, каб. 25
+          .contacts__col
+            .contacts__col
+              p.contacts__top-label Корпоративный e-mail
+              a(href="mailto:arenda@ctmol.ru ").contacts__top-mail arenda@ctmol.ru 
+            .contacts__col
+              p.contacts__top-label Телефон
+              a(href="tel:+73512160522").contacts__top-text +7 (351) 216-05-22
+        section.contacts__mapover
+          script(type="text/javascript", src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
+          .contacts__map.js-contacts-map(data-coords="55.185479, 61.285728")
+        section.contacts__managers
+          p.contacts__managers-title Наши менеджеры
+          ul.contacts__managers-list
+            - for (var x = 0; x < 6; x++)
+              li.contacts__managers-item
+                aside.contacts__managers-imgover
+                  img(src="img/manager1.jpg").contacts__managers-img
+                .contacts__managers-content
+                  p.contacts__managers-name Мигунова Елена Владимировна
+                  p.contacts__managers-place Директор Департамента имущественных отношений
+                  .contacts__managers-info
+                    .contacts__managers-info-row
+                      p.contacts__managers-info-title Телефон 
+                      a(href="tel:+73512160522").contacts__managers-info-value +7 (351) 216-05-22, доб. 9204
+                    .contacts__managers-info-row
+                      p.contacts__managers-info-title Сотовый телефон
+                      a(href="tel:+79128908120").contacts__managers-info-value  +7 912-890-81-20 
+                    .contacts__managers-info-row
+                      p.contacts__managers-info-title Индивидуальный e-mail: 
+                      a(href="mailto:e.migunova@ctmol.ru").contacts__managers-info-mail  e.migunova@ctmol.ru
+    include layout/__footer
+    include layout/__scripts

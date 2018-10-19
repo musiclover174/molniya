@@ -1,0 +1,100 @@
+/* font-family: "MuseoSansRegular"; */
+@font-face {
+    font-family: "MuseoSans";
+    src: url("fonts/MuseoSansRegular.eot");
+    src: url("fonts/MuseoSansRegular.eot?#iefix")format("embedded-opentype"),
+    url("fonts/MuseoSansRegular.woff") format("woff"),
+    url("fonts/MuseoSansRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+/* font-family: "MuseoSansBold"; */
+@font-face {
+    font-family: "MuseoSans";
+    src: url("fonts/MuseoSansBold.eot");
+    src: url("fonts/MuseoSansBold.eot?#iefix")format("embedded-opentype"),
+    url("fonts/MuseoSansBold.woff") format("woff"),
+    url("fonts/MuseoSansBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 700;
+}
+/* font-family: "MuseoSansItalic"; */
+@font-face {
+    font-family: "MuseoSans";
+    src: url("fonts/MuseoSansItalic.eot");
+    src: url("fonts/MuseoSansItalic.eot?#iefix")format("embedded-opentype"),
+    url("fonts/MuseoSansItalic.woff") format("woff"),
+    url("fonts/MuseoSansItalic.ttf") format("truetype");
+    font-style: italic;
+    font-weight: normal;
+}
+/* font-family: "MuseoSansLight"; */
+@font-face {
+    font-family: "MuseoSans";
+    src: url("fonts/MuseoSansLight.eot");
+    src: url("fonts/MuseoSansLight.eot?#iefix")format("embedded-opentype"),
+    url("fonts/MuseoSansLight.woff") format("woff"),
+    url("fonts/MuseoSansLight.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 300;
+}
+/* font-family: "MuseoSansMedium"; */
+@font-face {
+    font-family: "MuseoSans";
+    src: url("fonts/MuseoSansMedium.eot");
+    src: url("fonts/MuseoSansMedium.eot?#iefix")format("embedded-opentype"),
+    url("fonts/MuseoSansMedium.woff") format("woff"),
+    url("fonts/MuseoSansMedium.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 500;
+}
+/* font-family: "MuseoSansBlack"; */
+@font-face {
+    font-family: "MuseoSans";
+    src: url("fonts/MuseoSansBlack.eot");
+    src: url("fonts/MuseoSansBlack.eot?#iefix")format("embedded-opentype"),
+    url("fonts/MuseoSansBlack.woff") format("woff"),
+    url("fonts/MuseoSansBlack.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 900;
+}
+/* font-family: "MuseoSansBoldItalic"; */
+@font-face {
+    font-family: "MuseoSans";
+    src: url("fonts/MuseoSansBoldItalic.eot");
+    src: url("fonts/MuseoSansBoldItalic.eot?#iefix")format("embedded-opentype"),
+    url("fonts/MuseoSansBoldItalic.woff") format("woff"),
+    url("fonts/MuseoSansBoldItalic.ttf") format("truetype");
+    font-style: italic;
+    font-weight: 700;
+}
+/* font-family: "MuseoSansMediumItalic"; */
+@font-face {
+    font-family: "MuseoSans";
+    src: url("fonts/MuseoSansMediumItalic.eot");
+    src: url("fonts/MuseoSansMediumItalic.eot?#iefix")format("embedded-opentype"),
+    url("fonts/MuseoSansMediumItalic.woff") format("woff"),
+    url("fonts/MuseoSansMediumItalic.ttf") format("truetype");
+    font-style: italic;
+    font-weight: 500;
+}
+/* font-family: "MuseoSansLightItalic"; */
+@font-face {
+    font-family: "MuseoSans";
+    src: url("fonts/MuseoSansLightItalic.eot");
+    src: url("fonts/MuseoSansLightItalic.eot?#iefix")format("embedded-opentype"),
+    url("fonts/MuseoSansLightItalic.woff") format("woff"),
+    url("fonts/MuseoSansLightItalic.ttf") format("truetype");
+    font-style: italic;
+    font-weight: 300;
+}
+/* font-family: "MuseoSans"; */
+@font-face {
+    font-family: "MuseoSansBlackItalic";
+    src: url("fonts/MuseoSansBlackItalic.eot");
+    src: url("fonts/MuseoSansBlackItalic.eot?#iefix")format("embedded-opentype"),
+    url("fonts/MuseoSansBlackItalic.woff") format("woff"),
+    url("fonts/MuseoSansBlackItalic.ttf") format("truetype");
+    font-style: italic;
+    font-weight: 900;
+}

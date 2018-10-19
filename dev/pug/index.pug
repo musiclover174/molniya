@@ -1,0 +1,146 @@
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body.index
+    include layout/__header
+    section.content
+      .ibanner.swiper-container.js-ibanner
+        .swiper-wrapper
+          .swiper-slide
+            img(src="img/ibanner.jpg").ibanner__img
+            .container
+              p.ibanner__text Лидер на рынке коммерческой недвижимости Челябинска и Челябинской области
+          .swiper-slide
+            img(src="img/ibanner.jpg").ibanner__img
+            .container
+              p.ibanner__text Короткий текст
+          .swiper-slide
+            img(src="img/ibanner.jpg").ibanner__img
+            .container
+              p.ibanner__text Лидер на рынке коммерческой недвижимости Челябинска и Челябинской области, а также других областей в 200 километрах от нее
+        .swiper-buttons
+          .swiper-button-prev
+          .swiper-button-next
+        .swiper-progress.js-ibanner-progress
+      section.iabout
+        .container
+          p.iabout__title Компания
+          .iabout__row
+            main.iabout__text-over
+              p.iabout__text «Молния Недвижимость» – одна из крупнейших девелоперских компаний Челябинска, занимающаяся управлением, сдачей площадей в аренду и развитием торговых комплексов «Молния», Spar, «Семейный», торгово-офисных центров «Зенит» и Spar на Сталеваров, детской галереи Outlet в торговом комплексе «Фиеста», объектами Street-Retail.
+            aside.iabout__imgover
+              img(src="img/iabout.jpg").iabout__img
+      section.iabout_bgfixed
+        .container
+          p.iabout__we Мы разрабатываем концепции развития торговых, офисных и стрит-комплексов с целью сделать их максимально удобными и привлекательными для посетителей.
+      section.iabout__spar
+        .container
+          main.iabout__spar-textover
+            p.iabout__spar-text Постоянный покупательский трафик за счет сильного якорного аренжатора SPAR от 1500 до 9000 человек ежедневно в зависимости от выбранного торгового комплекса.
+          aside.iabout__spar-imgover
+            img(src="img/spar.jpg").iabout__spar-img
+      section.iabout__feats
+        .container
+          ul.iabout__feats-list
+            li(data-icon="tree").iabout__feats-item Динамично развивается на рынке коммерческой недвижимости 
+              span с 1998 года
+            li(data-icon="map").iabout__feats-item В собственности и управлении Компании МОЛНИЯ НЕДВИЖИМОСТЬ находится более 
+              span 100 тысяч кв.м. 
+              |  торговых и офисных площадей
+            li(data-icon="person").iabout__feats-item 
+              span Более 300 арендаторов
+              |, в том числе сетевых магазинов, открытых более чем в трех Торговых Комплексах
+            li(data-icon="family").iabout__feats-item Более 
+              span 28 млн.человек в год
+              |  посещают наши ТК
+      section.iclients__over.js-scenes
+        .iclients__spacer.js-scenes-spacer(data-step="1")
+        .iclients__spacer.js-scenes-spacer(data-step="2")
+        .iclients__spacer.js-scenes-spacer(data-step="3")
+        .iclients__spacer.js-scenes-spacer(data-step="4")
+        .iclients__scenes.js-scenes-positioner
+          .iclients__scene(data-step="1")
+            span.iclients__scene-bg(style="background-image: url('img/clients-bg1.jpg')")
+            .iclients__variant 
+              img(src="img/iclient_house.png").iclients__variant-img
+              p.iclients__variant-text Тут небольшой текст про сотрудничество конкретно с данным арендатором. Тут небольшой текст про сотрудничество конкретно с данным арендатором. Тут небольшой текст про сотрудничество конкретно с данным арендатором.
+          .iclients__scene(data-step="2")
+            span.iclients__scene-bg(style="background-image: url('img/clients-bg2.jpg')")
+            .iclients__variant 
+              img(src="img/iclient_rbt.png").iclients__variant-img
+              p.iclients__variant-text Тут небольшой текст про сотрудничество конкретно с данным арендатором. Тут небольшой текст про сотрудничество конкретно с данным арендатором. Тут небольшой текст про сотрудничество конкретно с данным арендатором.
+          .iclients__scene.iclients__scene_spaced(data-step="3")
+            span.iclients__scene-bg(style="background-image: url('img/clients-bg3.jpg')")
+            .container
+              p.iclients__more И еще более 20 известных марок
+              .iclients__car-over
+                .iclients__car.swiper-container.swiper-container.js-iclients
+                  .swiper-wrapper
+                    .swiper-slide
+                      img(src="img/client1.png").iclients__img
+                    .swiper-slide
+                      img(src="img/client2.png").iclients__img
+                    .swiper-slide
+                      img(src="img/client3.png").iclients__img
+                    .swiper-slide
+                      img(src="img/client4.png").iclients__img
+                    .swiper-slide
+                      img(src="img/client5.png").iclients__img
+                    .swiper-slide
+                      img(src="img/client6.png").iclients__img
+                    .swiper-slide
+                      img(src="img/client7.png").iclients__img
+                    .swiper-slide
+                      img(src="img/client8.png").iclients__img
+                    .swiper-slide
+                      img(src="img/client9.png").iclients__img
+                    .swiper-slide
+                      img(src="img/client10.png").iclients__img
+                    .swiper-slide
+                      img(src="img/client6.png").iclients__img
+                    .swiper-slide
+                      img(src="img/client7.png").iclients__img
+                    .swiper-slide
+                      img(src="img/client3.png").iclients__img
+                    .swiper-slide
+                      img(src="img/client4.png").iclients__img
+                    .swiper-slide
+                      img(src="img/client5.png").iclients__img
+                    .swiper-slide
+                      img(src="img/client6.png").iclients__img
+                .swiper-buttons
+                  .swiper-button-prev
+                  .swiper-button-next
+          .iclients__scene(data-step="4")
+            span.iclients__scene-bg(style="background-image: url('img/clients-bg4.jpg')")
+            .iclients__variant 
+              p.iclients__variant-title Стать арендатором
+              p.iclients__variant-text Оставьте заявку на сайте, и наш менеджер свяжется с вами для  уточнения деталей и подберет для вас необходимое помещение и лучшие финансовые условия.
+              .iclients__feed-over
+                button(type="button", data-fancybox, data-src="#betenant").iclients__feed.js-iclients-feed Написать нам
+            .iclients__contacts
+              p.iclients__contacts-title Телефон отдела аренды
+              a(href="tel:+73511234567").iclients__contacts-phone +7 (351) 123 45 67
+          .iclients__scene-title.js-scene-title1
+            .container
+              p.iclients__title Наши<br>арендаторы
+        span.iclients__progress.js-iclients-progress
+      section.inews
+        .container
+          p.news__title Что у нас нового
+          include blocks/news-elem
+
+          -var newsArray = []
+          -newsArray.push({img: 'img/inews1.jpg', date: "04 июля 2018", href: "С нами работают самые крупные арендаторы и ритейлы Челябинска а также ведущие банки России", text: "Оставьте заявку на сайте, и наш менеджер свяжется с вами для  уточнения деталей и подберет для вас необходимое помещение и лучшие финансовые условия.", mainNews: 'true'})
+          -newsArray.push({date: "28 июня 2018", href: "С нами работают самые крупные арендаторы и ритейлы Челябинска", text: "Уникальным якорным арендатором в наших Торговых Комплексах является магазин SPAR."})
+          -newsArray.push({date: "17 июня 2018", href: "Приглашаем инвесторов к партнерству", text: "Мы стремимся к тому, чтобы компания стала выбором № 1 для известных брендов в г. Челябинске и Челябинской области."})
+          -newsArray.push({date: "01 июня 2018", href: "200 квадратных метров под магазин по специальной цене", text: "Простая и понятная планировка наших торговых центров, наличие парковочных мест, расположение внутри жилых кварталов."})
+          -newsArray.push({date: "14 мая 2018", href: "Смена управляющей компании", text: "Мы разрабатываем концепции развития Торговых и офисных комплексов с целью сделать их максимально удобными и привлекательными для наших посетителей."})
+
+          section.news__grid
+            for news in newsArray
+              +newsElem(news)
+            a(href="#").news__href Все новости
+    include layout/__footer
+    include layout/__scripts

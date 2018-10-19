@@ -1,0 +1,99 @@
+.pagination
+  display flex
+  justify-content center
+  align-items flex-start
+  mt 55px
+  @media $lDesktopSmall
+    mt 25px
+  &__prev
+    ib()
+    mr 35px
+    mt -6px
+    size 40px 33px
+    background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAhCAMAAACcLxmXAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAARVBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD////cVMzlAAAAFnRSTlMAFFLoEPBHUUL55bsez91YVaMD0J4NrJc5MwAAAAFiS0dEFnzRqBkAAAAJcEhZcwAACxIAAAsSAdLdfvwAAABDSURBVDjLY2BAA4wMxAEmZhbi1LGyUVUd+6i6Ya2Og5OLmwjAwcDDy8cvQBjwAJM0r6AQUXaPqhypKoWJVikiil0CAO+KB/zTWUZbAAAAAElFTkSuQmCC") no-repeat center
+    background-size cover
+    transition .7s background
+    @media $lDesktopSmall
+      mr 30px
+      mt -8px
+    @media $LandscapeMin
+      size 20px 16px
+      mt 0
+      mr 25px
+    &:not(.disabled):hover
+      background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAhCAMAAACcLxmXAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAARVBMVEXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiX///+2O3fpAAAAFnRSTlMAFFLoEPBHUUL55bsez91YVaMD0J4NrJc5MwAAAAFiS0dEFnzRqBkAAAAJcEhZcwAACxIAAAsSAdLdfvwAAABDSURBVDjLY2BAA4wMxAEmZhbi1LGyUVUd+6i6Ya2Og5OLmwjAwcDDy8cvQBjwAJM0r6AQUXaPqhypKoWJVikiil0CAO+KB/zTWUZbAAAAAElFTkSuQmCC") no-repeat center
+      background-size cover
+    &.disabled
+      opacity .25
+      border-bottom transparent
+  &__next
+    ib()
+    ml 35px
+    mt -6px
+    size 40px 33px
+    background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAhCAMAAACcLxmXAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAARVBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD////cVMzlAAAAFnRSTlMAFFLoEPBHUUL55bsez91YVaMD0J4NrJc5MwAAAAFiS0dEFnzRqBkAAAAJcEhZcwAACxIAAAsSAdLdfvwAAABDSURBVDjLY2BAA4wMxAEmZhbi1LGyUVUd+6i6Ya2Og5OLmwjAwcDDy8cvQBjwAJM0r6AQUXaPqhypKoWJVikiil0CAO+KB/zTWUZbAAAAAElFTkSuQmCC") no-repeat center
+    background-size cover
+    transform scaleX(-1)
+    transition .7s background
+    @media $lDesktopSmall
+      ml 30px
+      mt -8px
+    @media $LandscapeMin
+      size 20px 16px
+      mt 0
+      ml 25px
+    &:not(.disabled):hover
+      background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAhCAMAAACcLxmXAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAARVBMVEXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiXjHiX///+2O3fpAAAAFnRSTlMAFFLoEPBHUUL55bsez91YVaMD0J4NrJc5MwAAAAFiS0dEFnzRqBkAAAAJcEhZcwAACxIAAAsSAdLdfvwAAABDSURBVDjLY2BAA4wMxAEmZhbi1LGyUVUd+6i6Ya2Og5OLmwjAwcDDy8cvQBjwAJM0r6AQUXaPqhypKoWJVikiil0CAO+KB/zTWUZbAAAAAElFTkSuQmCC") no-repeat center
+      background-size cover
+    &.disabled
+      opacity .25
+      border-bottom transparent
+  &__list
+    display flex
+  &__item
+    text-align center
+    color black
+    fontify 17px 300 19px
+    @media $lDesktopSmall
+      fontify 15px 300 17px
+    & + &
+      ml 37px
+      @media $lDesktopSmall
+        ml 33px
+      @media $LandscapeMin
+        ml 22px
+    &-href
+      pos relative
+      display inline-block
+      vertical-align middle
+      color black
+      fontify 17px 300 19px
+      transition .7s border
+      border-bottom 1px solid alpha(black, 1)
+      transition .5s color, .5s border
+      @media $lDesktopSmall
+        fontify 15px 300 17px
+      &:not(a):after
+        border-color transparent
+      &:hover
+        color $red
+        border-color transparent
+      ^[-1].active &
+        color white
+        border-color transparent
+        z-index 1
+        @media $LandscapeMin
+          color $red
+        &:before
+          content ""
+          pos absolute
+          z-index -1
+          size 35px
+          l 50%
+          t 50%
+          transform translate(-50%, -50%)
+          bgc $red
+          @media $lDesktopSmall
+            size 32px
+          @media $LandscapeMin
+            dn()

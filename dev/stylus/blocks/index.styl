@@ -1,0 +1,576 @@
+.ibanner
+  min-height 605px
+  h 70vh
+  @media $desktopMin
+    min-height 555px
+  @media $LandscapeMax
+    min-height 455px
+  @media $PortraitMedium 
+    min-height calc(100vh - 88px)
+  .swiper-slide
+    bgc #060606
+    z-index 1
+    overflow hidden
+    display flex
+    align-items flex-end
+    pb 230px
+    @media $LandscapeMax
+      pb 110px
+    &-active
+      & ^[0]
+        &__img
+          transform translate(-50%, -50%) scale(1.08)
+  .swiper-buttons
+    pos absolute
+    z-index 1
+    b 137px
+    l 50%
+    w 100%
+    max-width 1600px
+    padding 0 80px
+    transform translateX(-50%)
+    @media $desktopMedium
+      padding 0 30px
+    @media $LandscapeMax
+      b 37px
+  .swiper-progress
+    pos absolute
+    z-index 1
+    b 80px
+    h 7px
+    w 0
+    bgc $red
+    transition .7s width
+    @media $LandscapeMax
+      b 0
+  &__img
+    opacity .45
+    z-index -1
+    imgCenteringMin()
+    transition 7s transform
+  &__text
+    color white
+    fontify 72px 900 76px
+    @media $desktopMax
+      max-width 75%
+    @media $lDesktopSmall
+      fontify 60px 900 64px
+    @media $desktopMax
+      fontify 46px 700 50px
+    @media $desktopMin
+      fontify 36px 700 42px
+    @media $LandscapeMax
+      fontify 30px 700 36px
+      max-width none
+    @media $PortraitMedium
+      fontify 24px 700 28px
+    
+.iabout
+  //bgc white
+  pt 92px
+  mb -90px
+  pos relative
+  z-index 1
+  @media $desktopMin
+    mb -30px
+  @media $desktopMin
+    mb 0
+  &__title
+    fontify 60px 900 52px
+    mb 43px
+    @media $lDesktopSmall
+      fontify 48px 900 52px
+  &__row
+    display flex
+    justify-content space-between
+    @media $desktopMin
+      flex-direction column
+      justify-content flex-start
+      align-items flex-start
+  &__text
+    fontify 18px 300 28px
+    max-width 490px
+    @media $desktopMax
+      max-width 350px
+    @media $desktopMin
+      max-width none
+    &-over
+      w calc(50% - 31px)
+      @media $desktopMin
+        w 100%
+  &__imgover
+    w calc(50% - 31px)
+    mt 70px
+    @media $desktopMin
+      w 100%
+      mt 30px
+  &__img
+    pos relative
+    l -62px
+    max-width 100%
+    @media $desktopMin
+      l 0
+  &_bgfixed
+    pos relative
+    z-index 0
+    bgc white
+    mb 57px
+    .container
+      pos relative
+      h 810px
+      display flex
+      align-items center
+      @media $desktopMedium
+        h 610px
+      @media $desktopMin
+        h auto
+        margin 50px 0
+        padding 0
+      &:before
+        content ""
+        background url('../i/about-mask.png') no-repeat center
+        pos absolute
+        t 0
+        l 0
+        size 100% 100%
+        z-index 1
+        @media $desktopMedium
+          background-size cover
+        @media $desktopMin
+          dn()
+      &:after
+        content ""
+        background url('../i/about-bgfixed.jpg') no-repeat center
+        pos absolute
+        t 0
+        l 0
+        size 100% 100%
+        z-index 0
+        background-attachment fixed
+        @media $desktopMin
+          dn()
+  &__we
+    fontify 18px 300 28px
+    max-width 425px
+    pos relative
+    z-index 2
+    @media $lDesktopMedium
+      max-width 350px
+    @media $lDesktopSmall
+      max-width 270px
+    @media $desktopMin
+      max-width none
+      padding 0 30px
+  &__spar
+    mb 152px
+    @media $desktopMin
+      mb 70px
+    .container
+      display flex
+      justify-content space-between
+      align-items center
+      @media $desktopMin
+        flex-direction column-reverse
+        justify-content flex-start
+        align-items flex-start
+    &-textover,
+    &-imgover
+      w calc(50% - 31px)
+      @media $desktopMin
+        w 100%
+    &-text
+      fontify 28px 500 38px
+      max-width 600px
+      @media $lDesktopMedium
+        max-width 500px
+      @media $lDesktopSmall
+        max-width 410px
+      @media $desktopMax
+        fontify 24px 500 34px
+      @media $desktopMin
+        fontify 18px 300 28px
+      @media $desktopMin
+        max-width none
+        mt 30px
+    &-img
+      max-width 100%
+  &__feats
+    mb 85px
+    @media $desktopMin
+      mb 25px
+    &-list
+      display flex
+      flex-wrap wrap
+      ml -62px
+      w calc(100% + 62px)
+    &-item
+      w calc(50% - 62px)
+      ml 62px
+      pos relative
+      pl 60px
+      fontify 21px 300 31px
+      mb 69px
+      pr 110px
+      @media $lDesktopMedium
+        fontify 18px 300 24px
+      @media $desktopMin
+        w calc(100% - 62px)
+        pr 0
+      span
+        font-weight 700
+        color $red
+      &:before
+        content ""
+        pos absolute
+        l 0
+        t -12px
+      &[data-icon="tree"]:before
+        size 38px 47px
+        l -4px
+        t -5px
+        @media $lDesktopMedium
+          t 0
+        @media $desktopMin
+          t -12px
+        background url("data:image/png;base64,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") no-repeat center
+      &[data-icon="map"]:before
+        size 46px
+        t -5px
+        l -6px
+        @media $lDesktopMedium
+          t 0
+          l -10px
+        background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACIlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///9U965LAAAAtHRSTlMAA1Kn3vb706BQAjfV7K2Rja7PM1r66VwFB2Hn+E8//MgWHBjNNAjgFQmD6uYEaQ/L/rRts1hbx9aaVpy8ixSYl5MqYEtCQExmJC1UVR1wL2wfqtDi0aHwnvUQOfnZTQrvqDh2QeFFwwaC2wFezuR0maK4kh637vP99HjrpBmblKUhb7rSO3wxir++amVI8YcofyJ9YthdwKt+xspRPJUwlmQszK/JsrvCWXq9DIVzqdyI2t1lC3VVAAAAAWJLR0S1Mw5aSwAAAAlwSFlzAAALEgAACxIB0t1+/AAAArtJREFUSMeVlPlfEmEQxscU1PVM1DQlCk0B8UAqTcpS0PAorTBT8RY10jIz8cgkLcsOum+77/uaP7Ddd1d2QXjdnl/mmdnvZz/vzryzAGsUsSEySqGMjollQIbi4jEhMSl5YwKmqNanU9PSN2VwJnNzVrZ6PXqLZus29jxabQRATq5iO53Oy8/Xgd5QgFhg0IPOGF1IxYswFopLTKVm8w5TSTHsxF1UvKwcYLemgrMVGgsw+XtotF6zFyqV+/hkv7ISqrIzKHg1WsGGNXxSiwfAjnUUvB5ToQGFdquwEVKxnoIfxEPQhM180oxNYMbDtMMnHAE46tBxVudoATjWSr0Jx9vaocPZ2ZWZ2dXp7IDunl5qI/uwH2DAhawcA9wYBqk4DBmH2dk2GE405AEw7pSTdFyNI2GSkGLco2JSdmp4HZxtn/+4fXg6NFM75tcZHF+tJmKvWD87IeLnlJO82rDVY6rmi3VT05OicEbEZ88Lpggn5pwXeD+vlLwQsrx+exEXRBwszjnOVioipeddvOS3jXhZglebDJxdwitSPDnNf5WvKrslOIzP6tmrn74c0A2reDevtYAUH8TrADfwZgCuYu+2MBqfJQCHUTfDlMcHzl+vuSW423jnrqB7BB9BtRrvB83mQalgHqJEOWxh2Pho2Rg8/8cuwSRl2zlVYZXdbiOVfsSl4Mk/wWLePH1Ggg1tq4/aPZ72YHwFn5NYqHgRjIPVGkxDHRaR+BKta/AQYqZfkfga3wi4+21IveNb+n6IhDFPBIk5Hz6GlFv4RksrCbmfgKoZAV8gM8lLS5aH15Bvi8PP4cAvZDEU2EOij2yIOfxf0+sZk8rnZWsxk2H/JV5XQPqV25DyRZCJcxvybeq7XJzbkFpckYtzG/IDtXJxbkN+ZoFcnNuQX47fYRXvC8yjXPAH/0N//wEx/i5T0YbO9AAAAABJRU5ErkJggg==") no-repeat center
+      &[data-icon="person"]:before
+        size 33px 47px
+        background url("data:image/png;base64,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") no-repeat center
+      &[data-icon="family"]:before
+        size 50px 46px
+        l -8px
+        @media $lDesktopMedium
+          l -10px
+        background url("data:image/png;base64,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") no-repeat center
+.iclients
+  &__spacer
+    h 100vh
+  &__over
+    pos relative
+  &__scenes
+    pos absolute
+    t 0
+    l 0
+    w 100%
+    h 100vh
+    &.scene1
+      & ^[0]__scene
+        &[data-step="1"]
+          z-index 1
+          opacity 1
+          visibility visible
+          .iclients__variant 
+            opacity 1
+            top 0
+            transition-delay 1s
+          .iclients__scene-bg
+            transform scale(1)
+      .iclients__scene-title
+        t 71px
+        opacity 1
+        transition-delay 1s
+        @media $desktopMedium
+          t 31px
+        @media $desktopMin
+          t 116px
+        @media $PortraitMedium 
+          t 108px
+    &.scene2
+      & ^[0]__scene
+        &[data-step="1"]
+          z-index 1
+          .iclients__variant 
+            opacity 0
+            top -60px
+          .iclients__scene-bg
+            transform scale(1.2)
+        &[data-step="2"]
+          z-index 2
+          opacity 1
+          visibility visible
+          .iclients__scene-bg
+            transform scale(1)
+          .iclients__variant 
+            opacity 1
+            top 0
+            transition-delay 1s
+    &.scene3
+      & ^[0]__scene
+        &[data-step="2"]
+          z-index 1
+          .iclients__variant 
+            opacity 0
+            top -60px
+          .iclients__scene-bg
+            transform scale(1.2)
+        &[data-step="3"]
+          z-index 2
+          opacity 1
+          visibility visible
+          .iclients__scene-bg
+            transform scale(1)
+          .iclients__more
+            t 0 
+            opacity 1
+            transition-delay 1s
+          .iclients__car-over
+            t 0 
+            opacity 1
+            transition-delay 1s
+      .iclients__scene-title
+        t 41px
+        opacity 0
+        transition-delay 0s
+    &.scene4
+      & ^[0]__scene
+        &[data-step="3"]
+          z-index 1
+          .iclients__scene-bg
+            transform scale(1.2)
+          .iclients__more
+            t -40px 
+            opacity 0
+          .iclients__car-over
+            t -40px 
+            opacity 0
+        &[data-step="4"]
+          z-index 2
+          opacity 1
+          visibility visible
+          .iclients__scene-bg
+            transform scale(1)
+          .iclients__variant 
+            opacity 1
+            top 0
+            transition-delay 1s
+          .iclients__contacts
+            opacity 1
+            b 56px
+            transition-delay 1s
+  &__scene
+    pos absolute
+    t 0
+    l 0
+    w 100%
+    h 100%
+    display flex
+    align-items center
+    justify-content center
+    bgc #060606
+    z-index 2
+    overflow hidden
+    opacity 0
+    visibility hidden
+    transition .7s opacity, .7s visibility
+    @media $desktopMin
+      pt 116px
+    @media $PortraitMedium 
+      pt 108px
+    @media $LandscapeMax
+      justify-content flex-start
+      pl 30px
+      pr 30px
+    &[data-step="1"],
+    &[data-step="2"]
+      @media $LandscapeMedium
+        align-items flex-end
+        pb 40px
+    &[data-step="4"]
+      @media $desktopMin
+        pt 156px
+      @media $LandscapeMedium
+        align-items flex-start
+      @media $PortraitMedium 
+        pt 148px
+    &:first-child
+      opacity 1
+      visibility visible
+    &-bg
+      pos absolute
+      t 0 
+      l 0
+      w 100%
+      h 100%
+      opacity .45
+      z-index -1
+      background-position center
+      background-size cover
+      background-attachment fixed
+      transition 2s transform
+      transform scale(1.2)
+    &:first-child &-bg
+      transform scale(1)
+    &-title
+      pos absolute
+      z-index 2
+      l 80px
+      r 80px
+      t 111px
+      opacity 0
+      transition .7s opacity, .7s top
+      @media $desktopMedium
+        l 30px
+        t 71px
+      @media $desktopMin
+        t 156px
+      @media $PortraitMedium 
+        t 148px
+      & > .container
+        padding 0
+    & > .container
+      h 100%
+      display flex
+      flex-direction column
+      justify-content space-between
+      align-items flex-start
+      @media $LandscapeMax
+        padding 0
+  &__title
+    pos relative
+    color white
+    fontify 36px 900 40px
+    @media $lDesktopSmall
+      fontify 24px 900 28px
+  &__progress
+    pos absolute
+    z-index 3
+    t 0
+    r 80px
+    h 0
+    w 7px
+    bgc $red
+    opacity 0
+    transition .7s opacity
+    &[style]
+      opacity 1
+    @media $desktopMedium
+      r 30px
+    @media $LandscapeMax
+      r 0
+  &__variant
+    pos relative
+    max-width 572px
+    bgc $red
+    padding 54px 48px 30px
+    color white
+    fontify 15px 300 25px
+    opacity 0
+    t 60px
+    transition .7s opacity, .7s top
+    @media $LandscapeMax
+      l 25px
+      w calc(100% - 25px)
+      max-width none
+    @media $PortraitMin
+      l 0
+      w 100%
+      padding 29px 28px 20px
+    &-img
+      pos absolute
+      l -62px
+      b 90%
+      @media $LandscapeMax
+        l -25px
+      @media $PortraitMin
+        max-width 150px
+        b 95%
+        l 50%
+        transform translateX(-50%)
+    &-title
+      pos absolute
+      l -62px
+      b 90%
+      color white
+      fontify 48px 900 52px
+      w 1px
+      @media $lDesktopSmall
+        fontify 36px 900 40px
+      @media $LandscapeMax
+        l -25px
+      @media $LandscapeMax
+        fontify 30px 900 36px
+      @media $PortraitMedium
+        fontify 24px 900 28px
+        l 28px
+        b 95%
+  &__feed
+    cursor pointer
+    pos relative
+    color white
+    fontify 13px 700 13px
+    &:after
+      content ""
+      pos absolute
+      t -2px
+      r -45px
+      size 35px 19px
+      background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAATBAMAAADojanHAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAD1BMVEX///////////////////+Rd1MVAAAABHRSTlMArj3p00sEkgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAmSURBVBjTY2BAAowKDOiAyQhDiEF5gJS5oAMHIgzDYhadFUFCFQATdQi/Wu/E0QAAAABJRU5ErkJggg==") no-repeat center
+      transition .7s right
+    &:hover:after
+      r -55px
+    &-over
+      text-align right
+      mt 23px
+      pr 28px
+  &__contacts
+    display flex
+    flex-direction column
+    pos absolute
+    l 80px
+    b 16px
+    opacity 0
+    transition .7s opacity, .7s bottom
+    @media $desktopMedium
+      l 30px
+      b 20px
+    &-title
+      color white
+      fontify 15px 300 19px
+      mb 14px
+    &-phone
+      color white
+      fontify 21px 500 21px
+      @media $lDesktopSmall
+        fontify 18px 500 18px
+  &__more
+    pos relative
+    color white
+    fontify 36px 900 40px
+    pt 70px
+    t 40px
+    opacity 0
+    transition .7s top, .7s opacity
+    @media $lDesktopSmall
+      fontify 24px 900 28px
+    @media $desktopMedium
+      pt 30px
+    @media $desktopMin
+      pt 0
+  &__car
+    &-over
+      w 100%
+      pos relative
+      opacity 0
+      t 20px
+      transition .7s opacity, .7s top
+      .swiper-buttons
+        pos absolute
+        l 0
+        t -75px
+    .swiper-wrapper
+      display flex
+      align-items center
+    .swiper-slide
+      mb 75px
+      @media $LandscapeMedium
+        mb 35px
+  &__img
+    max-width 80%

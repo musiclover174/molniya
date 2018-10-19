@@ -1,0 +1,18 @@
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+    section.content
+      section.container
+        section.breadcrumbs
+          a(href="#").breadcrumbs__href Главная
+          span.breadcrumbs__delim / 
+        h1 Объект №5
+        .text
+          p Недвижимость — вид имущества, признаваемого в законодательном порядке недвижимым.
+          p К недвижимости по происхождению относятся земельные участки, участки недр и все, что прочно связано с землей, то есть объекты, перемещение которых без несоразмерного ущерба их назначению невозможно, в том числе здания, сооружения, объекты незавершённого строительства.
+        include blocks/plan
+    include layout/__footer
+    include layout/__scripts
